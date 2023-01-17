@@ -1,4 +1,4 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp} from "firebase/app";
 
 import {getFirestore,collection,getDocs,addDoc,deleteDoc,doc,updateDoc, onSnapshot,} from "firebase/firestore"
@@ -15,7 +15,6 @@ const firebaseConfig = {
 };
 
 //************************************************************************ */
-//^ ONEMLİ GİRİŞ YAPINCA BU DOSYAYA BUNDLE I CALISTIR  npm run build ile bundle güncelle yoksa güncellenmiyor ekran
 //************************************************************************
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -164,7 +163,7 @@ signInForm.sifre.value=""
 })
 
 
-//& auth state change listener kullanıcının durumunu giriş yaptımı cıktım dinleyen onAuthStateChanged() metodu listener bu!!!!
+//& auth state change listener kullanıcının durumunu giriş yaptımı veya cıktımı dinleyen onAuthStateChanged() metotudur.
 
 //KULLANICI GİRDİMİ ÇIKTIMI DİYE !!!SÜREKLİ KONTROL EDEN onAuthStateChanged(auth,(user)=>{})
 onAuthStateChanged(auth,(user)=>{
@@ -175,5 +174,5 @@ onAuthStateChanged(auth,(user)=>{
         console.log("Giren Kullanıcı",user)
        
     }
-    //^signup yaptıktan sonra giriş yapıyor yine kullanıcı kayıt sonrası giriş yapmış oluyor signup sonrası giriş yaptı der consola!!
-})//2.paremetre kullanıcı durumu değiştiginde uygulanacak fonksiyon
+    //^signup yaptıktan sonra giriş yapıyor yine kullanıcı kayıt sonrası giriş yapmış oluyor, signup sonrası giriş yaptı der consola!!
+})//2.paremetre kullanıcı durumu değiştiginde uygulanacak fonksiyondur.
